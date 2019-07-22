@@ -29,12 +29,12 @@ public class testSelectedStore extends BaseTest {
         login.clickLogin();
 
 
-        //Navigate to shopping page and verify store Name
+        //Navigate to shopping page and select store Name
 
        shoppingPage = new ShoppingPage(driver);
        shoppingPage.selectStore(storeName);
 
-
+        // Assert that the actual store name equals expected
        Assert.assertEquals(shoppingPage.getSelectedStoreName(),storeName);
 
 
